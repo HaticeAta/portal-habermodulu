@@ -7,6 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model frontend\models\Haber */
 
 $this->title = $model->HaberID;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Admin Paneli'), 'url' => ['../habermodulu']];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Habers'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -30,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'HaberID',
+			'Kategori',
             'Baslik',
             'Ozet:ntext',
             'Detay:ntext',

@@ -16,6 +16,8 @@ use yii\widgets\ActiveForm;
     ]); ?>
 
     <?= $form->field($model, 'HaberID') ?>
+	
+	<?= $form->field($model, 'Kategori') ?>
 
     <?= $form->field($model, 'Baslik') ?>
 
@@ -25,9 +27,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Resim') ?>
 
-    <?php // echo $form->field($model, 'EklenmeTarihi') ?>
+    <?php  echo $form->field($model, 'EklenmeTarihi') ?>
 
-    <?php // echo $form->field($model, 'GuncellenmeTarihi') ?>
+    <?php  echo $form->field($model, 'GuncellenmeTarihi') ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>

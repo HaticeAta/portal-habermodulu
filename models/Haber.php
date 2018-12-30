@@ -31,10 +31,11 @@ class Haber extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['HaberID', 'Baslik', 'Ozet', 'Detay', 'Resim', 'EklenmeTarihi', 'GuncellenmeTarihi'], 'required'],
+            [['HaberID', 'Kategori','Baslik', 'Ozet', 'Detay', 'Resim', 'EklenmeTarihi', 'GuncellenmeTarihi'], 'required'],
             [['HaberID'], 'integer'],
             [['Ozet', 'Detay', 'Resim'], 'string'],
             [['EklenmeTarihi', 'GuncellenmeTarihi'], 'safe'],
+			[['Kategori'], 'string', 'max' => 12],
             [['Baslik'], 'string', 'max' => 128],
             [['HaberID'], 'unique'],
         ];
@@ -47,6 +48,7 @@ class Haber extends \yii\db\ActiveRecord
     {
         return [
             'HaberID' => 'Haber ID',
+			'Kategori' => 'Kategori',
             'Baslik' => 'Baslik',
             'Ozet' => 'Ozet',
             'Detay' => 'Detay',

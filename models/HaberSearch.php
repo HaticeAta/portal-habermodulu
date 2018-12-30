@@ -19,7 +19,7 @@ class HaberSearch extends Haber
     {
         return [
             [['HaberID'], 'integer'],
-            [['Baslik', 'Ozet', 'Detay', 'Resim', 'EklenmeTarihi', 'GuncellenmeTarihi'], 'safe'],
+            [['Kategori','Baslik', 'Ozet', 'Detay', 'Resim', 'EklenmeTarihi', 'GuncellenmeTarihi'], 'safe'],
         ];
     }
 
@@ -64,7 +64,8 @@ class HaberSearch extends Haber
             'GuncellenmeTarihi' => $this->GuncellenmeTarihi,
         ]);
 
-        $query->andFilterWhere(['like', 'Baslik', $this->Baslik])
+        $query->andFilterWhere(['like', 'Kategori', $this->Kategori])
+			->andFilterWhere(['like', 'Baslik', $this->Baslik])
             ->andFilterWhere(['like', 'Ozet', $this->Ozet])
             ->andFilterWhere(['like', 'Detay', $this->Detay])
             ->andFilterWhere(['like', 'Resim', $this->Resim]);

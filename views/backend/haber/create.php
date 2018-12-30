@@ -6,6 +6,7 @@ use yii\helpers\Html;
 /* @var $model frontend\models\Haber */
 
 $this->title = Yii::t('app', 'Create Haber');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Admin Paneli'), 'url' => ['../habermodulu']];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Habers'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
