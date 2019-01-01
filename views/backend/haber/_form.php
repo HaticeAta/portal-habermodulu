@@ -30,7 +30,7 @@ use yii\widgets\MaskedInput;
 
     <?= $form->field($model, 'Ozet')->textInput()?>
 
-    <?= $form->field($model, 'Detay')->textarea(['rows' => 4]) ?>
+    <?= $form->field($model, 'Detay')->textarea(['rows' => 20]) ?>
 
     <?= $form->field($model, 'Resim')->textInput() ?>
 
