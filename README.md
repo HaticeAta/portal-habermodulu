@@ -10,3 +10,5 @@
  - Backend kısmı hazırlandı
  - Formlar düzenlendi
  
+ ### **01/01/2019**
+ - Frontend kısmı hazırlandı
