@@ -1,5 +1,10 @@
 # portal-habermodulu
 
+*Kullancı paneli:* http://portal.kouosl/habermodulu
+
+*Admin paneli:* http://portal.kouosl/admin/habermodulu
+
+
 ### **14/12/2018**
  - Modül oluşturuldu
  
