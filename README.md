@@ -17,3 +17,6 @@
  
  ### **01/01/2019**
  - Frontend kısmı tamamlandı
+ 
+  ### **03/01/2019**
+ - Migrations Eklendi
