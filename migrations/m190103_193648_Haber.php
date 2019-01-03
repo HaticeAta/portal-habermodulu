@@ -3,11 +3,11 @@
 use yii\db\Migration;
 
 /**
- * Class m190103_185646_Haber
+ * Class m190103_193648_Haber
  */
-class m190103_185646_Haber extends Migration
+class m190103_193648_Haber extends Migration
 {
-    // Use up()/down() to run migration code without a transaction.
+   // Use up()/down() to run migration code without a transaction.
     public function up()
     {
 		$tableOptions = null;
@@ -15,22 +15,22 @@ class m190103_185646_Haber extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
 		
-		$TABLE_NAME = 'Haber';
+		$TABLE_NAME = 'HaberDeneme12';
         $this->createTable($TABLE_NAME, [
-            'HaberID' => $this->integer(10)->primaryKey(),
+            'HaberID' => $this->integer(10)->notNull(),
             'Kategori' => $this->string(12)->notNull(),
             'Baslik' => $this->string(128)->notNull(),
             'Ozet' => $this->text()->notNull(),
             'Detay' => $this->text()->notNull(),
             'Resim' => $this->text()->notNull(),
-            'EklenmeTarihi' => $this->timestamp()->defaultExpression('CURRENT_TIMESTAMP'),
-            'GuncellenmeTarihi' => $this->timestamp()->defaultExpression('CURRENT_TIMESTAMP')
+            'EklenmeTarihi' => $this->date(),
+            'GuncellenmeTarihi' => $this->date()
         ], $tableOptions);
 		
 		
-		$TABLE_NAME = 'HaberKategori';
+		$TABLE_NAME = 'HaberKategoriDeneme12';
 		 $this->createTable($TABLE_NAME, [
-            'KategoriID' => $this->integer(10)->primaryKey(),
+            'KategoriID' => $this->integer(10)->notNull(),
             'Kategori' => $this->string(20)->notNull()
         ], $tableOptions);
 		
@@ -47,5 +47,4 @@ class m190103_185646_Haber extends Migration
 		$TABLE_NAME = 'HaberKategori';
         $this->dropTable($TABLE_NAME);
     }
-    
 }
